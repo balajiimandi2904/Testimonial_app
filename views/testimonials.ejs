@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial App</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Testimonial App</h1>
+        <nav>
+          <a href="/">Add Testimonial</a>
+          <a href="/testimonials">View Testimonials</a>
+        </nav>
+      </header>
+
+      <div class="testimonials-container">
+        <h2>Customer Testimonials</h2>
+
+        <% if (testimonials.length > 0) { %>
+        <div class="testimonial-list">
+          <% testimonials.forEach(testimonial => { %>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"<%= testimonial.feedback %>"</p>
+            <div class="testimonial-meta">
+              <span class="testimonial-author"><%= testimonial.name %></span>
+              <span class="testimonial-date"
+                ><%= new Date(testimonial.createdAt).toLocaleDateString('en-US',
+                { year: 'numeric', month: 'long', day: 'numeric' }) %></span
+              >
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <% } else { %>
+        <p>No testimonials yet. Be the first to share your feedback!</p>
+        <% } %>
+      </div>
+
+      <footer>
+        <p>&copy; 2025 Testimonial App</p>
+        <p>created by Imandi Balaji</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial App</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Testimonial App</h1>
+        <nav>
+          <a href="/">Add Testimonial</a>
+          <a href="/testimonials">View Testimonials</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="form-container">
+          <h2>Add Your Testimonial</h2>
+
+          <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+          <div class="error-messages">
+            <ul>
+              <% errors.forEach(error => { %>
+              <li><%= error %></li>
+              <% }) %>
+            </ul>
+          </div>
+          <% } %>
+
+          <form action="/add-testimonial" method="POST">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value="<%= typeof name !== 'undefined' ? name : '' %>"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value="<%= typeof email !== 'undefined' ? email : '' %>"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="feedback">Feedback:</label>
+              <textarea id="feedback" name="feedback" rows="5" required>
+<%= typeof feedback !== 'undefined' ? feedback : '' %></textarea
+              >
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Testimonial</button>
+          </form>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Testimonial App</p>
+        <p>created by Balaji</p>
+      </footer>
+    </div>
+  </body>
+</html>
