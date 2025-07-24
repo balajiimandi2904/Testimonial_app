@@ -2,34 +2,41 @@
 A simple web application built with Node.js, Express, EJS, and MongoDB that allows users to submit testimonials/feedback and displays them on a public page.
 
 # Setup Instructions
+
 ## Prerequisites
--Node.js (v14 or higher)
--npm (comes with Node.js)
--MongoDB (local instance or MongoDB Atlas account)
+- Node.js (v14 or higher)
+- npm (comes with Node.js)
+- MongoDB (local instance or MongoDB Atlas account)
 
 ## Installation
+
 1. clone the repository
 ```
 git clone https://github.com/balajiimandi2904/Testimonial_app.git
 cd testimonial-app
 ```
+
 2. install depenedencies
 ```
 npm install
 ```
+
 3. Setup your environment variables
 - create a .env file in root directory
 - add your mongoDB connection URL
   ```MONGODB_URL=mongodb://localhost:27017/testimonial-app```
 4. Start MongoDB: ensure the service is running
+  
 5. Run the Application:
 ```nodemon app.js```
 or
 ```node app.js```
-6. Access the application:
+
+7. Access the application:
 open your browser and your navigate to : ```http://localhost:8080```
 
 # Usage
+
 ## Submit a Testimonial
 - Navigate to the home page (/)
 - Fill out the form with:
