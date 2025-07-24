@@ -6,7 +6,7 @@ A simple web application built with Node.js, Express, EJS, and MongoDB that allo
 ## Prerequisites
 - Node.js (v14 or higher)
 - npm (comes with Node.js)
-- MongoDB (local instance or MongoDB Atlas account)
+- MongoDB (local instance)
 
 ## Installation
 
