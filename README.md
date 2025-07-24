@@ -25,6 +25,8 @@ npm install
 - create a .env file in root directory
 - add your mongoDB connection URL
   ```MONGODB_URL=mongodb://localhost:27017/testimonial-app```
+- add port in .env file
+  ```PORT=8080```
 4. Start MongoDB: ensure the service is running
   
 5. Run the Application:
